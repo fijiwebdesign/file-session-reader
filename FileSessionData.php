@@ -52,9 +52,9 @@ class FileSessionData extends AbstractSessionData
    * $SessionData = FileSessionData::singleton();
    * 
    */
-  public static function singleton(array $args = array(), $className = __CLASS__)
+  public static function singleton(array $args = array(), $classname = __CLASS__)
   {
-    return parent::singleton($args, __CLASS__);
+    return parent::singleton($args, $classname);
   }
   
   /**
