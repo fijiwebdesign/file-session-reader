@@ -1,3 +1,5 @@
+require('AbstractSessionData.php');
+
 /**
  * Class for retrieving session data when save handler is files
  * 
