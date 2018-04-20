@@ -1,3 +1,5 @@
+<?php
+
 require('AbstractSessionData.php');
 
 /**
@@ -50,9 +52,9 @@ class FileSessionData extends AbstractSessionData
    * $SessionData = FileSessionData::singleton();
    * 
    */
-  public static function singleton(array $args = array())
+  public static function singleton(array $args = array(), $className = __CLASS__)
   {
-    return parent::singleton(__CLASS__, $args);
+    return parent::singleton($args, __CLASS__);
   }
   
   /**

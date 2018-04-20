@@ -24,9 +24,12 @@ abstract class AbstractSessionData
    * $SessionData = AbstractSessionData::singleton('FileSessionData');
    * 
    */
-  public static function singleton($classname, array $args)
+  public static function singleton(array $args, string $classname = null)
   {
     static $instance = array();
+    if (!$classname) {
+      $classname = get_called_class();
+    }
     if (!isset($instance[$classname])) 
     {
       $instance[$classname] = new $classname;
